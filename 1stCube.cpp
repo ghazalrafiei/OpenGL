@@ -9,10 +9,6 @@ int main(int argc, char** argv){
     glutInitWindowPosition(300,100);
     glutCreateWindow("First Cube");
     glutDisplayFunc(display);
-    
-
-
-
     glutMainLoop();
 
     return 0;
@@ -81,8 +77,7 @@ glBegin(GL_QUADS);//LEFT
     glVertex3f(e, e, e);
   glEnd();
 
-
-     glBegin(GL_QUADS);//TOP
+   glBegin(GL_QUADS);//TOP
     glColor3f(1.0f, 0.0f, 0.0f);    
     glNormal3f(0.0,0.0,1.0);
     glVertex3f( e,  e, e);
@@ -105,14 +100,6 @@ glBegin(GL_QUADS);//LEFT
     glNormal3f(0.0,1.0,0.0);
     glVertex3f( e, e,  e);
   glEnd();
-
-  
-
- 
-
-  
- 
-
   
   glPopMatrix();
         
