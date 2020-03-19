@@ -1,2 +1,2 @@
 # OpenGL
-Drwaing 3D colorful cubes and 5 2D shoaes via OpenGl library in c++.
+Drwaing 3D colorful cubes and 5 2D shapes via OpenGl library in c++.
