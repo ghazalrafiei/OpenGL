@@ -1,2 +1,2 @@
 # OpenGL
-Drwaing 3D colorful cubes and 5 2D shapes via OpenGl library in c++.
+Drawing few shapes in OpenGL library in C++ including lighting and material.
