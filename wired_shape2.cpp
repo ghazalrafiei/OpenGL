@@ -1,9 +1,8 @@
-#include<GL\glut.h>
+#include<GL/glut.h>
 
 double rotate_cube_y = 0;
 double rotate_cube_x = 0.5;
 double rotate_sphere = 0.0;
-double rotate_shape = 0.0;
 
 void init(void) {
 
@@ -17,7 +16,7 @@ void init(void) {
 	GLfloat light_ambient[] = { 0.5, 0.5, 0.5, 1.0 };
 	GLfloat light_diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
 	GLfloat light_specular[] = { 1.0, 1.0, 1.0, 1.0 };
-	GLfloat light_position[] = { 2.0, -2.0, 2.0, 1.0 };
+	GLfloat light_position[] = { 2.0, 1.5, -0.5, 1.0 };
 	GLfloat spot_direction[] = { 0.0,0.0, 0.0 };
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
@@ -45,24 +44,22 @@ void display(void) {
 	glPushMatrix();
 	glRotatef(rotate_cube_x, 1.0, 0.0, 0.0);
 	glRotatef(rotate_cube_y, 0.0, 1.0, 0.0);
-	glColor3f(0.75, 0.75, 1.1);
+	glColor3f(0.4, 0.7, 0.4);
 	glutWireCube(1.0);
 	glPopMatrix();
 
-	//**Rotating Wire Sphere**
+	//**Wire Sphere**
 	glPushMatrix();
-	glRotatef(rotate_sphere, 0.0, 1.0, 0.0);
+	glRotatef(rotate_sphere, 0.0, 0.0, 0.0);
 	glRotatef(90, 1.0, 0.0, 0.0);
-	glColor3f(0.2, 0.6, 1.0);
-	glutWireSphere(0.5, 8, 8);
+	glColor3f(0.5, 0.2, 0.8);
+	glutWireSphere(0.5, 20, 20);
 	glPopMatrix();
 
-	//**Rotating octahedron**//
+	//**Inner Sphere **//
 	glPushMatrix();
-	glColor3f(0.2, 0.2, 0.13);
-	glScalef(0.25, 0.40, 0.25);
-	glRotatef(rotate_shape, 0.0, 1.0, 0.0);
-	glutSolidOctahedron();
+	glColor3f(0.6, 0.8, 0.6);
+	glutSolidSphere(0.2, 100, 100);
 	glPopMatrix();
 
 	glPopMatrix();
@@ -75,8 +72,7 @@ void timer(int v) {
 
 	rotate_cube_x -= 0.5;
 	rotate_cube_y -= 0.75;
-	rotate_sphere += 1.5;
-	rotate_shape += -9.0;
+	rotate_sphere += 5.0;
 
 	glutPostRedisplay();
 	glutTimerFunc(50, timer, 0);

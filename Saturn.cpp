@@ -1,4 +1,4 @@
-#include<GL\glut.h>
+#include<GL/glut.h>
 
 double rotate_y = 0;
 double rotate_x = 0;
