@@ -14,8 +14,8 @@ void init(void) {
 
 	//LIGHT0
 	GLfloat light_ambient[] = { 0.5, 0.5, 0.5, 1.0 };
-	GLfloat light_diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
-	GLfloat light_specular[] = { 1.0, 1.0, 1.0, 1.0 };
+						GLfloat light_diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
+	GLfloat light_specular[] = { 1.0, 1.0, 1.0,       1.0 };
 	GLfloat light_position[] = { 2.0, 1.5, -0.5, 1.0 };
 	GLfloat spot_direction[] = { 0.0,0.0, 0.0 };
 
