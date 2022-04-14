@@ -52,12 +52,12 @@ Try arrow keys!
 </p>
 
 ## Colorful Cube
----
+
 <p align="center">
 <img src="./pics/colorful_cube.png" width="400">
 </p>
 
 ## Simple cube
----
+
 <p align="center">
 <img src="./pics/simple_cube.png" width="400">
