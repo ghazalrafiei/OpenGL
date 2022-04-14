@@ -4,7 +4,7 @@ Drawing few shapes in OpenGL library in C++ including lighting and material.
 ## How to run
 ```g++ <file name> -lglut -lGLU -lGL```
 
-```./a.out```
+./a.out```
 
 ## Buildings (Or a city from above!)
 
